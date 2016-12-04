@@ -1,0 +1,68 @@
+<!-- Default home page -->
+<div class="container">
+	<div class="row">
+		<div class="col-12">
+			<div class="page-header">
+			  	<h1>Actors <br>
+			  	<small>Just Edit and watch</small></h1>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<!-- Actors form -->
+		<div class="col-sm-12 col-md-4">
+			<h1>Actor Creation Form</h1>
+			<% if(flash && flash.err){ %>
+				<ul>
+				<% Object.keys(flash.err).forEach(function(error){ %>
+					<li><%- JSON.stringify(flash.err[error]) %></li>
+				<% }) %>
+				</ul>
+			<% } %>
+			<form action="/actors/new" method="POST" id="createActorForm">
+			  <!-- Actor ID -->
+			  <div class="form-group">
+			    <label for="actorID">ID</label>
+			    <input name="actorId" type="text" class="form-control" id="actorID" placeholder="ID">
+			  </div>
+			  <!-- Actor Name -->
+			  <div class="form-group">
+			    <label for="actorName">Name</label>
+			    <input name="name" type="text" class="form-control" id="actorName" placeholder="Name">
+			  </div>
+			  <!-- Actor Type -->
+			  <div class="form-group">
+			    <label for="actorType">Type</label>
+			    <input name="type" type="text" class="form-control" id="actorType" placeholder="Type">
+			  </div>
+			  <input type="hidden" name="_csrf" value="<%= _csrf %>" />
+			  <button type="submit" class="btn btn-default">Submit</button>
+			</form>
+		</div>
+		<!-- Actors List on Real Time -->
+		<div class="col-sm-12 col-md-8">
+			<h1>List of Actors</h1>
+			<% if(actors){ %>
+				<table class="table table-striped">
+					<tr>
+						<th>ID</th>
+						<th>Name</th>
+						<th>Actor ID</th>
+						<th>Type</th>
+					</tr>
+					<% actors.forEach(function(actor){ %>
+					<tr>
+						<td><%= actor.id %></td>
+						<td><%= actor.name %></td>
+						<td><%= actor.actorId %></td>
+						<td><%= actor.type %></td>
+					</tr>
+					<% }) %>
+				</table>
+
+
+				<ul>
+			<% } %>
+		</div>
+	</div>
+</div>

@@ -35,6 +35,19 @@ module.exports.routes = {
   '/': {
     view: 'homepage'
   }
+  // '/actors': {
+  //   view: 'actors'
+  //   //actors: localDiskDb.Actors.find()
+  // },
+  // '/talkpaths':{
+  //   view: 'talkpaths'
+  // },
+  // '/dialogs':{
+  //   view: 'dialogs'
+  // },
+  // '/items':{
+  //   view: 'items'
+  // }
 
   /***************************************************************************
   *                                                                          *

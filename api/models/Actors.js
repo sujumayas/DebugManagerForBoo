@@ -7,8 +7,26 @@
 
 module.exports = {
 
-  attributes: {
-
-  }
+	attributes: {
+		actorId: {							//id="ACT01"
+			type: 'string',
+			unique: true,
+			required: true
+		},
+		name: {								//Specs {name="Altibor"}
+			type: 'string',
+			unique: true,
+			required: true
+		},
+		type: {								//Specs {type="Main"}
+			type: 'string',
+			unique: false,
+			required: true
+		},
+		inventory:{
+			collection: 'Items', 
+			via : 'model'
+		}
+	}
 };
 
