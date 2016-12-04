@@ -1,0 +1,565 @@
+DialogSets {
+	Set {
+
+		actorID = "ACT00"
+		
+		Dialog {
+			id = "emp01"
+			text = "Next!@Mr. Altibor!"
+		}
+	}
+	Set {
+		actorID = "ACT01"
+		
+		Dialog {
+			id = "alt01"
+			text = "Oh, blimey@not again..."
+			nextID = "alt02"
+		}
+		Dialog {
+			id = "alt02"
+			text = "I'm late for my@meeting with the@wizard's council!"
+			nextID = "alt03"
+		}
+		Dialog {
+			id = "alt03"
+			text = "Where are those@bloody glasses?"
+		}
+		Dialog {
+			id = "alt04"
+			text = "Much better!"
+		}
+		Dialog {
+			id = "alt05"
+			text = "He is ignoring me."
+		}
+		Dialog {
+			id = "alt06"
+			text = "Who are you?"
+			nextID = "alt07"
+		}
+		Dialog {
+			id = "alt07"
+			text = "What is this?"
+			nextID = "alt08"
+		}
+		Dialog {
+			id = "alt08"
+			text = "Where am I?"
+		}
+		Dialog {
+			id = "alt09"
+			text = "I’m so sorry."
+			nextID = "alt10"
+		}
+		Dialog {
+			id = "alt10"
+			text = "What can I do?"
+		}
+		Dialog {
+			id = "alt11"
+			text = "OOOOOOOOoooh!"
+			nextID = "alt12"
+		}
+		Dialog {
+			id = "alt12"
+			text = "AAAAAAaaaaah!"
+			nextID = "alt13"
+		}
+		Dialog {
+			id = "alt13"
+			text = "I’m faaaaaalling!"
+			nextID = "alt14"
+		}
+		Dialog {
+			id = "alt14"
+			text = "Also, I’m kind of hungryyyyyyyyy..."
+			nextID = "alt15"
+		}
+		Dialog {
+			id = "alt15"
+			text = "Why am I thinking about that?"
+			nextID = "alt16"
+		}
+		Dialog {
+			id = "alt16"
+			text = "Focus!"
+		}
+		Dialog {
+			id = "alt17"
+			text = "Yes! Concentrate, remember those lessons... What was that levitation spell?"
+		}
+		Dialog {
+			id = "alt18"
+			text = "LeviOza!"
+		}
+		Dialog {
+			id = "alt19"
+			text = "LeviozA!"
+		}
+		Dialog {
+			id = "alt20"
+			text = "Icarus Incantum!"
+		}
+		Dialog {
+			id = "alt21"
+			text = "Lord of hack; don’t stack; give me back, my old Jetpack!"
+		}
+		Dialog {
+			id = "alt22"
+			text = "I did it!"
+			nextID = "alt23"
+		}
+		Dialog {
+			id = "alt23"
+			text = "These boots are really heavy"
+			nextID = "alt24"
+		}
+		Dialog {
+			id = "alt24"
+			text = "Fortunately I have very strong legs"
+			nextID = "alt25"
+		}
+		Dialog {
+			id = "alt25"
+			text = "I’m alive! Hurray!"
+		}
+		Dialog {
+			id = "altnopick01"
+			text = "Cloning Me@while ingame@breaks the Game"
+			nextID = "altnopick05"
+		}
+		Dialog {
+			id = "altnopick02"
+			text = "My Moths@are not@Moths"
+			nextID = "altnopick05"
+		}
+		Dialog {
+			id = "altnopick03"
+			text = "I have@No PARALLAX!"
+			nextID = "altnopick05"
+		}
+		Dialog {
+			id = "altnopick04"
+			text = "Hilble had to@remake the Bubble's@animations"
+			nextID = "altnopick05"
+		}
+		Dialog {
+			id = "altnopick01"
+			text = "Cloning Me@while ingame@breaks the Game"
+			nextID = "altnopick05"
+		}
+		Dialog {
+			id = "altnopick05"
+			text = "Now who's@fault is that..."
+		}
+	}
+	
+	Set {
+
+		actorID = "ACT02"
+		
+		Dialog {
+			id = "rg01"
+			text = "I know I am"
+			nextID = "rg02"
+		}
+		Dialog {
+			id = "rg02"
+			text = "But you are@not cutting me@in line!"
+		}
+		Dialog {
+			id = "rg03"
+			text = "Hey,@I'm over here!"
+			nextID = "rg04"
+		}
+		Dialog {
+			id = "rg04"
+			text = "And of course@I heard you."
+			nextID = "rg05"
+		}
+		Dialog {
+			id = "rg05"
+			text = "You tapped on@my shoulder."
+			nextID = "rg06"
+		}
+		Dialog {
+			id = "rg06"
+			text = "Watch what@you say."
+		}
+		Dialog {
+			id = "rg07"
+			text = "How on earth@would I know?"
+		}
+		Dialog {
+			id = "rg08"
+			text = "Oh really?"
+			nextID = "rg09"
+		}
+		Dialog {
+			id = "rg09"
+			text = "Well,@I find young@aspiring wizards@to be very@anoying"
+			nextID = "rg10"
+		}
+		Dialog {
+			id = "rg10"
+			text = "And you@are not@cutting me@in line!"
+		}
+		Dialog {
+			id = "rg11"
+			text = "You're a@moron..."
+			nextID = "rg12"
+		}
+		Dialog {
+			id = "rg12"
+			text = "Wich part of@#you're saying all@of those things@out lout# didn't@you understand?!"
+		}
+		Dialog {
+			id = "rg13"
+			text = "Well of@course..."
+			nextID = "rg14"
+		}
+		Dialog {
+			id = "rg14"
+			text = "The@personality@test for@wizards!"
+			nextID = "rg15"
+		}
+		Dialog {
+			id = "rg15"
+			text = "You need@to fill it@out for the@council..."
+			nextID = "rg16"
+		}
+		Dialog {
+			id = "rg16"
+			text = "Here,@ take it"
+		}
+		Dialog {
+			id = "rg17"
+			text = "Now please@let me focus."
+			nextID = "rg18"
+		}
+		Dialog {
+			id = "rg18"
+			text = "The wizards@will call us in@any second now!"
+		}
+		Dialog {
+			id = "rg19"
+			text = "You are not@cutting in line"
+		}
+	}
+	
+	Set {
+		actorID = "ACT07"
+		
+		Dialog {
+			id = "co01"
+			text = "Looks like someone is finally awake!"
+		}
+		Dialog {
+			id = "co02"
+			text = "I’m your designated pilot."
+			nextID = "co03"
+		}
+		Dialog {
+			id = "co03"
+			text = "This ship is my baby!"
+			nextID = "co04"
+		}
+		Dialog {
+			id = "co04"
+			text = "You are travelling to your OMG!"
+			nextID = "co05"
+		}
+		Dialog {
+			id = "co05"
+			text = "Boy, you’re a pretty loud snorer."
+			nextID = "co06"
+		}
+		Dialog {
+			id = "co06"
+			text = "Your teachers carried you to my vessel."
+			nextID = "co07"
+		}
+		Dialog {
+			id = "co07"
+			text = "You have been a burden ever since!"
+		}
+		Dialog {
+			id = "co08"
+			text = "Just lend me a hand, please."
+			nextID = "co09"
+		}
+		Dialog {
+			id = "co09"
+			text = "I need you to set those sails over there."
+		}
+		Dialog {
+			id = "co10"
+			text = "Damn! I lost another."
+		}
+		Dialog {
+			id = "co11"
+			text = "C’mon, what are you waiting for?"
+			nextID = "co12"
+		}
+		Dialog {
+			id = "co12"
+			text = "Just set those sails!"
+		}
+		Dialog {
+			id = "co13"
+			text = "Well of course."
+			nextID = "co14"
+		}
+		Dialog {
+			id = "co14"
+			text = "I wouldn’t ask you to set the sails if it wasn’t safe."
+			nextID = "co15"
+		}
+		Dialog {
+			id = "co15"
+			text = "Now we are ready."
+			nextID = "co16"
+		}
+		Dialog {
+			id = "co16"
+			text = "Here we go!!!"
+			nextID = "co17"
+		}
+		Dialog {
+			id = "co17"
+			text = "Oh! I almost forgot..."
+			nextID = "co18"
+		}
+		Dialog {
+			id = "co18"
+			text = "The only thing I need is your documentation."
+			nextID = "co19"
+		}
+		Dialog {
+			id = "co19"
+			text = "Surely you have your OMG papers, no"
+			nextID = "co20"
+		}
+		Dialog {
+			id = "co20"
+			text = "It’s necessary for travelling long distances."
+			nextID = "co21"
+		}
+		Dialog {
+			id = "co21"
+			text = "And of course you have to pay my fee!"
+			nextID = "co22"
+		}
+		Dialog {
+			id = "co22"
+			text = "I need a dose of sugar when battling wild winds like this, you now"
+		}
+		Dialog {
+			id = "co23"
+			text = "I don’t need this."
+		}
+		Dialog {
+			id = "co24"
+			text = "I knew you had them."
+			nextID = "co25"
+		}
+		Dialog {
+			id = "co25"
+			text = "Here we go!!!"
+			nextID = "co26"
+		}
+		Dialog {
+			id = "co26"
+			text = "Oh, but I forgot..."
+			nextID = "co27"
+		}
+		Dialog {
+			id = "co27"
+			text = "You haven’t paid my fee yet!"
+			nextID = "co28"
+		}
+		Dialog {
+			id = "co28"
+			text = "I need a dose of sugar when battling wild winds like this, you now?"
+		}
+		Dialog {
+			id = "co29"
+			text = "I just need something sweet for the trip!"
+		}
+		Dialog {
+			id = "co30"
+			text = "Ñam, ñam"
+			nextID = "co31"
+		}
+		Dialog {
+			id = "co31"
+			text = "I knew you had something."
+			nextID = "co32"
+		}
+		Dialog {
+			id = "co32"
+			text = "You don’t like sharing, eh?"
+			nextID = "co33"
+		}
+		Dialog {
+			id = "co33"
+			text = "Here we go!!!"
+			nextID = "co34"
+		}
+		Dialog {
+			id = "co34"
+			text = "Oh, but I forgot..."
+			nextID = "co35"
+		}
+		Dialog {
+			id = "co35"
+			text = "The only thing I need is your documentation."
+			nextID = "co36"
+		}
+		Dialog {
+			id = "co36"
+			text = "Surely you have your OMG papers, no?"
+		}
+		Dialog {
+			id = "co37"
+			text = "I just need your documentation the trip!"
+		}
+		Dialog {
+			id = "co38"
+			text = "Okey, we are ready..."
+			nextID = "co39"
+		}
+		Dialog {
+			id = "co39"
+			text = "Here we go!!!"
+			nextID = "co40"
+		}
+		Dialog {
+			id = "co40"
+			text = "Oh, but I forgot..."
+			nextID = "co41"
+		}
+		Dialog {
+			id = "co41"
+			text = "This is a just a demo."
+			nextID = "co42"
+		}
+		Dialog {
+			id = "co42"
+			text = "Let me give you a cool ending then..."
+		}
+		Dialog {
+			id = "co43"
+			text = "Hey kid!"
+			nextID = "co44"
+		}
+		Dialog {
+			id = "co44"
+			text = "Maybe you should think about taking a shower once in a while."
+			nextID = "co45"
+		}
+		Dialog {
+			id = "co45"
+			text = "I smell something terrible..."
+			nextID = "co46"
+		}
+		Dialog {
+			id = "co46"
+			text = "Just like an onion..."
+		}
+	}
+	Set {
+
+		actorID = "ACT04"
+		
+		Dialog {
+			id = "bm01"
+			text = "zzzZZZ"
+			nextID = "bm01"
+		}
+		Dialog {
+			id = "bm02"
+			text = "zzzZZZzzz"
+		}
+		Dialog {
+			id = "bm03"
+			text = "I’m awake, I’m awake, of course I am..."
+			nextID = "bm04"
+		}
+		Dialog {
+			id = "bm04"
+			text = "We need you to sign here, here, here, here, and here..."
+			nextID = "bm05"
+		}
+		Dialog {
+			id = "bm05"
+			text = "Just the regular paperwork for travelling to Ferraria"
+		}
+	}
+	Set {
+
+		actorID = "ACT05"
+		
+		Dialog {
+			id = "rw01"
+			text = "Are you nervous, Altibor?"
+		}
+	}
+	Set {
+
+		actorID = "ACT06"
+		
+		Dialog {
+			id = "gw01"
+			text = "Don’t take another step!"
+			nextID = "gw02"
+		}
+		Dialog {
+			id = "gw02"
+			text = "You have to hand in your personality test"
+			nextID = "gw03"
+		}
+		Dialog {
+			id = "gw03"
+			text = "Come on, tap your pocket and drag it to me"
+			nextID = "gw04"
+		}
+		Dialog {
+			id = "gw04"
+			text = "Hurry up! You´re the 100th student we’ve seen today..."
+		}
+		Dialog {
+			id = "gw05"
+			text = "The results of this test will provide you with your official wizard title"
+			nextID = "gw06"
+		}
+		Dialog {
+			id = "gw06"
+			text = "The Great, The White, The Unpretentious..."
+			nextID = "gw07"
+		}
+		Dialog {
+			id = "gw07"
+			text = "The Sleepy One over here..."
+		}
+		Dialog {
+			id = "gw08"
+			text = "Well, you shouldn’t be.@The time has come for you@to complete your@OMG: Obligatory Mage Groundwork!"
+		}
+	}
+	Set {
+
+		actorID = "ACT08"
+		
+		Dialog {
+			id = "em01"
+			text = "Watch@your step"
+			nextID = "em02"
+		}
+		Dialog {
+			id = "em02"
+			text = "And eat@before leaving"
+		}
+	}
+}

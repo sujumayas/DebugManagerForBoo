@@ -1,0 +1,93 @@
+Notices {
+	Notice {
+		situation = "NotInReach"
+		
+		Messages {
+			message1 = "It's not in my range"
+			message2 = "I can't reach it"
+			message3 = "If only my arms where longer"
+		}
+	}
+	
+	Notice {
+		situation = "CantTalk"
+		
+		Messages {
+			message1 = "I don't know what to say"
+			message2 = "I should mind my own bussines"
+		}
+	}
+}
+
+Talkpaths {
+	Talkpath {
+		actorTarget = "ACT02"
+		
+		Choice {
+			id = "CHO01"
+			text = "Beautiful@indeed"
+			responseID = "rg01"
+			
+			ToAvailable {
+				choiceID = "CHO03"
+			}
+		}
+		
+		Choice {
+			id = "CHO02"
+			text = "Did I forget@Something?"
+			responseID = "rg07"
+
+			ToAvailable {
+				choiceID = "CHO03"
+			}
+		}
+		
+		Choice {
+			id = "CHO03"
+			text = "Did she@hear me???"
+			responseID = "rg03"
+			
+			ToAvailable {
+				choiceID = "CHO05"
+				choiceID = "CHO04"
+			}
+		}
+		
+		Choice {
+			id = "CHO04"
+			text = "I find@redheads to be@very attractive"
+			responseID = "rg08"
+			
+			ToAvailable {
+				choiceID = "CHO05"
+				choiceID = "CHO06"
+			}
+		}
+		
+		Choice {
+			id = "CHO05"
+			text = "Did we need@to bring@anything?"
+			responseID = ""
+		}
+		
+		Choice {
+			id = "CHO06"
+			text = "So fiery..."
+			responseID = "rg11"
+			
+			ToAvailable {
+				choiceID = "CHO05"
+			}
+		}
+	}
+	Talkpath {
+		actorTarget = "ACT06"
+		
+		Choice {
+			id = "CHO01"
+			text = "Oh@Blimey!"
+			responseID = "rg01"
+		}
+	}
+}

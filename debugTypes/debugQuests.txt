@@ -1,0 +1,441 @@
+Quests {
+	Quest {
+
+		id = "QTNOPICK01"
+		description = "Kanashiro's Omen"
+		
+		Task {
+			action = "get"
+			target = "IT02"
+			ammount = "1"
+		}
+
+		Activates {
+			quest = "QTNOPICK02"
+		}
+	}
+
+	Quest {
+
+		id = "QTNOPICK02"
+		description = "Kanashiro's Demise"
+		
+		Task {
+			action = "use"
+			target = "IT02"
+			overTarget = "ACT01"
+			ammount = "1"
+		}
+
+		Adventure {
+			Call {
+				id = "QCBLAMETHEARTIST"
+				onActivate = "MakeActorSay"
+
+				ParamList {
+			
+					actID = "ACT01"
+					param = "altnopick03"
+				}
+			}
+		}
+	}
+
+	Quest {
+
+		id = "QT01"
+		description = "Pick up Glasses"
+		
+		Task {
+			action = "get"
+			target = "IT02"
+			ammount = "1"
+		}
+		Task {
+			action = "use"
+			target = "IT02"
+			overTarget = "ACT01"
+			ammount = "1"
+		}
+
+		Activates {
+			quest = "QT02"
+		}
+	}
+	
+	Quest {
+		id = "QT02"
+		description = "Talk with the Redgirl about what to bring"		
+		
+		Task {
+			action = "say"
+			target = "CHO05"
+			overTarget = "ACT02"
+			ammount = "1"
+		}
+		Activates {
+			quest = "QT03"
+		}
+		
+		Adventure {
+			Call {
+				id = "QC00A"
+				onActivate = "PlayCinematic"
+				
+				ParamList {
+					
+					cinematicID = "CMT03"
+				}
+			}
+			Call {
+				id = "QC00B"
+				onActivate = "ChangeActorState"
+				
+				ParamList {
+					
+					actID = "ACT01"
+					param = "ACS00"
+				}
+			}
+			Call {
+				id = "QC00C"
+				onActivate = "ChangeVisibility"
+				
+				ParamList {
+					
+					sceneObject = "Blur"
+					param = "false"
+				}
+			}
+			Call {
+				id = "QC000"
+				onActivate = "EnableBox"
+				
+				ParamList {
+					
+					sceneObject = "Box01"
+					param = "true"
+				}
+			}
+			Call {
+				id = "QC001"
+				onActivate = "MakeQuestActor"
+			
+				ParamList {
+				
+					actID = "ACT02"
+					param = "CHO01"
+					param = "CHO02"
+				}
+			}
+			Call {
+				id = "QC002"
+				onActivate = "MakeActorSay"
+
+				ParamList {
+			
+					actID = "ACT01"
+					param = "alt04"
+				}
+			}
+		}
+	}
+
+	Quest {
+		id = "QT03"
+		description = "Watch The girl give you the scroll"
+
+		Task {
+			action = "watch"
+			target = "CMT04"
+			ammount = "1"
+		}
+		Activates {
+			quest = "QT04"
+		}
+
+		Adventure {
+			Call {
+				id = "QC003"
+				onActivate = "PlayCinematic"
+
+				ParamList {
+				
+					cinematicID = "CMT04"
+				}
+			}
+		}
+	}
+	
+	Quest {
+		id = "QT04"
+		description = "Use emptyTest on self"
+
+		Task {
+			action = "use"
+			target = "IT01"
+			overTarget = "ACT01"
+			ammount = "1"
+		}
+		Activates {
+			quest = "QT05"
+		}
+
+		Adventure {
+			Call {
+				id = "QC004"
+				onActivate = "ResetQuestActor"
+
+				ParamList {
+				
+					itemID = "ACT02"
+				}
+			}
+			Call {
+				id = "QC005"
+				onActivate = "ReceiveItem"
+
+				ParamList {
+				
+					itemID = "IT01"
+				}
+			}
+		}
+	}
+
+	Quest {
+		id = "QT05"
+		description = "Solve a Puzzle"		
+		
+		Task {
+			action = "solve"
+			target = "PZZ1"
+			ammount = "1"
+		}
+		Activates {
+			quest = "QT06"
+			quest = "QT07"
+			quest = "QT08"
+		}
+		
+		Adventure {
+			Call {
+				id = "QC006"
+				onActivate = "ShowcasePuzzle"
+			
+				ParamList {
+			
+					puzzleForm = "Pergamino"
+				}
+			}
+			Call {
+				id = "QC007"
+				onActivate = "MakeScaleTransition"
+				
+				ParamList {
+				
+					puzzleForm = "FondoDefault"
+					setBool = "false"
+				}
+			}
+		}
+	}
+	Quest {
+		id = "QT06"
+		description = "Solve a Puzzle"		
+		
+		Task {
+			action = "solve"
+			target = "PZZ16"
+			ammount = "1"
+		}
+		Activates {
+			quest = "QT09"
+		}
+	}
+	Quest {
+		id = "QT07"
+		description = "Solve a Puzzle"		
+		
+		Task {
+			action = "solve"
+			target = "PZZ17"
+			ammount = "1"
+		}
+		Activates {
+			quest = "QT09"
+		}
+	}
+	Quest {
+		id = "QT08"
+		description = "Solve a Puzzle"		
+		
+		Task {
+			action = "solve"
+			target = "PZZ18"
+			ammount = "1"
+		}
+		Activates {
+			quest = "QT09"
+		}
+	}
+	
+	Quest {
+		id = "QT09"
+		description = "Go to the Wizzard's Room"		
+		
+		Task {
+			action = "watch"
+			target = "CMT02"
+			ammount = "1"
+		}
+		Activates {
+			quest = "QT10"
+		}
+		
+		Adventure {
+			Call {
+				id = "QC008"
+				onActivate = "DismissActor"
+				
+				ParamList {
+			
+					actID = "ACT02"
+				}
+			}
+			Call {
+				id = "QC009"
+				onActivate = "DismissActor"
+				
+				ParamList {
+			
+					actID = "ACT03"
+				}
+			}
+			Call {
+				id = "QC010"
+				onActivate = "MakeActorSay"
+			
+				ParamList {
+			
+					actID = "ACT00"
+					param = "emp01"
+				}
+			}
+			Call {
+				id = "QC011"
+				onActivate = "MakeActorSay"
+				
+				ParamList {
+					
+					actID = "ACT04"
+					param = "bm01"
+				}
+			}
+			Call {
+				id = "QC012"
+				onActivate = "MakeSelectable"
+				
+				ParamList {
+					
+					sceneObject = "CMTrigger01"
+					param = "false"
+				}
+			}
+			Call {
+				id = "QC013"
+				onActivate = "MakeSelectable"
+				
+				ParamList {
+					
+					sceneObject = "CMTrigger02"
+					param = "true"
+				}
+			}
+			Call {
+				id = "QC014"
+				onActivate = "ReceiveItem"
+				
+				ParamList {
+				
+					itemID = "IT03"
+				}
+			}
+		}
+	}
+	Quest {
+		id = "QT10"
+		description = "Give Personality Test To Green Wizzard"		
+		
+		Task {
+			action = "use"
+			target = "IT03"
+			overTarget = "ACT06"
+			ammount = "1"
+		}
+		Activates {
+			quest = "QT11"
+		}
+
+		Adventure {
+			Call {
+				id = "QC015"
+				onActivate = "MakeQuestActor"
+			
+				ParamList {
+				
+					actID = "ACT06"
+				}
+			}
+		}
+	}
+	Quest {
+		id = "QT11"
+		description = "Talk with the Green Wizzard"		
+		
+		Task {
+			action = "solve"
+			target = "PZZ18"
+			ammount = "1"
+		}
+		Activates {
+			quest = "QT12"
+		}
+
+		Adventure {
+			Call {
+				id = "QC016"
+				onActivate = "ShowcasePuzzle"
+			
+				ParamList {
+			
+					puzzleForm = "WizzardAnswers"
+				}
+			}
+			Call {
+				id = "QC017"
+				onActivate = "SetChildActive"
+			
+				ParamList {
+			
+					targetParent = "WizzardAnswers"
+					targetChild = "YesNoBubbles"
+					active = "true"
+				}
+			}
+		}
+	}
+	Quest {
+		id = "QT12"
+		description = "Talk with the Driver"		
+		
+		Task {
+			action = "solve"
+			target = "PZZ18"
+			ammount = "4"
+		}
+		Activates {
+			quest = "QT13"
+		}
+	}
+}

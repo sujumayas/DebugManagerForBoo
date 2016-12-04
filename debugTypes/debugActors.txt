@@ -1,0 +1,78 @@
+Actors {
+	Actor {
+		id ="ACT00"
+		
+		Specs {
+			name = "EmptyActor"
+			type = "NPC"
+		}
+	}
+	Actor {
+		id="ACT01"
+		
+		Specs {
+			name="Altibor"
+			type="Main"
+		}
+	}
+	Actor {
+		id="ACT02"
+		
+		Specs {
+			name="GreenGirl"
+			type="NPC"
+		}
+		Inventory {
+			item="IT01"
+			item="IT02"
+		}
+	}
+	Actor {
+		id ="ACT03"
+		
+		Specs {
+			name = "ClockMan"
+			type = "NPC"
+		}
+	}
+	Actor {
+		id ="ACT04"
+		
+		Specs {
+			name = "BlueWizzard"
+			type = "NPC"
+		}
+	}
+	Actor {
+		id ="ACT05"
+		
+		Specs {
+			name = "RedWizzard"
+			type = "NPC"
+		}
+	}
+	Actor {
+		id ="ACT06"
+		
+		Specs {
+			name = "GreenWizzard"
+			type = "NPC"
+		}
+	}
+	Actor {
+		id="ACT07"
+		
+		Specs {
+			name="Driver"
+			type="NPC"
+		}
+	}
+	Actor {
+		id="ACT08"
+		
+		Specs {
+			name="ElevatorMan"
+			type="NPC"
+		}
+	}
+}

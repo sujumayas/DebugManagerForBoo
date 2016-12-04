@@ -1,0 +1,274 @@
+StateActions {
+	Guides {
+		Guide {
+			id = "FreeMode"
+			IdSet {
+				stateAction = "STA01"
+				stateAction = "STA02"
+				stateAction = "STA03"
+				stateAction = "STA04"
+				stateAction = "STA05"
+				stateAction = "STA06"
+				stateAction = "STA07"
+				stateAction = "STA08"
+				stateAction = "STA09"
+				stateAction = "STA10"
+				stateAction = "STA11"
+				stateAction = "STA12"
+				stateAction = "STA13"
+				stateAction = "STA14"
+				stateAction = "STA15"
+				stateAction = "STA16"
+				stateAction = "STA18"
+				stateAction = "STA19"
+			}
+		}
+		Guide {
+			id = "Interacting"
+			IdSet {
+				stateAction = "STA01"
+				stateAction = "STA02"
+				stateAction = "STA07"
+				stateAction = "STA08"
+				stateAction = "STA09"
+				stateAction = "STA10"
+				stateAction = "STA11"
+				stateAction = "STA12"
+				stateAction = "STA13"
+				stateAction = "STA15"
+				stateAction = "STA17"
+				stateAction = "STA18"
+				stateAction = "STA19"
+				stateAction = "STA21"
+			}
+		}
+		Guide {
+			id = "PuzzleForm"
+			IdSet {
+				stateAction = "STA07"
+				stateAction = "STA08"
+				stateAction = "STA14"
+				stateAction = "STA17"
+				stateAction = "STA18"
+				stateAction = "STA19"
+			}
+		}
+		Guide {
+			id = "Cinematic"
+			IdSet {
+				stateAction = "STA12"
+			}
+		}
+	}
+
+	StateAction {
+		id = "STA01"
+		
+		Set {
+			action="DownUp"
+			objectTag="Player"
+			methodName="OpenInventory"
+			isSingle="false"
+		}
+	}
+	StateAction {
+		id = "STA02"
+		
+		Set {		
+			action="DownUp"
+			objectTag="None"
+			methodName="CloseInventory"
+			isSingle="false"
+		}
+
+	}
+	StateAction {
+		id = "STA03"
+
+		Set {
+			action="DownUp"
+			objectTag="Floor"
+			methodName="SetMainActorMoveNode"
+			isSingle="true"
+		}
+	}
+	StateAction {
+		id = "STA04"
+
+		Set {
+			action="DownUp"
+			objectTag="PickupEntity"
+			methodName="SetNodeToEntity"
+			isSingle="true"
+		}
+	}
+	StateAction {
+		id = "STA05"
+
+		Set {
+			action="DownUp"
+			objectTag="Item"
+			methodName="UpdateInventory"
+			isSingle="true"
+		}
+	}
+	StateAction {
+		id = "STA06"
+
+		Set {
+			action="DownUp"
+			objectTag="QuestActor"
+			methodName="MoveActorToQuestActorNode"
+			isSingle="false"
+		}
+	}
+	StateAction {
+		id = "STA07"
+
+		Set {
+			action="Drag"
+			objectTag="Draggeable"
+			methodName="DraggItemFromInventory"
+			isSingle="false"
+		}
+	}
+	StateAction {
+		id = "STA08"
+
+		Set {
+			action="DragUp"
+			objectTag="Draggeable"
+			methodName="SendDraggedItemToInventory"
+			isSingle="true"
+			overTarget="None"
+		}
+	}
+	StateAction {
+		id = "STA09"
+
+		Set {
+			action="DragUp"
+			objectTag="Draggeable"
+			methodName="CheckQuestUseOnActor"
+			isSingle="true"
+			overTarget="Player"
+		}
+	}
+	StateAction {
+		id = "STA10"
+
+		Set {
+			action="DragUp"
+			objectTag="Draggeable"
+			methodName="CheckQuestUseOnActor"
+			isSingle="true"
+			overTarget="QuestActor"
+		}
+	}
+	StateAction {
+		id = "STA11"
+
+		Set {
+			action="DragUp"
+			objectTag="Draggeable"
+			methodName="SendDraggedItemToInventory"
+			isSingle="true"
+			overTarget="Actor"
+		}
+	}
+	StateAction {
+		id = "STA12"
+		Set {
+			action="DownUp"
+			objectTag="Dialog"
+			methodName="CloseBubble"
+			isSingle="true"
+		}
+	}
+	StateAction {
+		id = "STA13"
+		Set {
+			action="DownUp"
+			objectTag="Image"
+			methodName="CloseBubble"
+			isSingle="true"
+		}
+	}
+	StateAction {
+		id = "STA14"
+		Set {
+			action="DownUp"
+			objectTag="PuzzlePiece"
+			methodName="CheckPieceTap"
+			isSingle="true"
+		}
+	}
+	StateAction{
+		id = "STA15"
+		Set {
+			action="DownUp"
+			objectTag="Speech"
+			methodName="OnEngage"
+			isSingle="true"
+		}
+	}
+	StateAction{
+		id = "STA16"
+		Set {
+			action="DragUp"
+			objectTag="Draggeable"
+			methodName="CheckQuestUseOnFloor"
+			isSingle="true"
+			overTarget="Floor"
+		}
+	}
+	StateAction{
+		id = "STA17"
+		Set {
+			action="DragUp"
+			objectTag="Draggeable"
+			methodName="SendDraggedItemToInventory"
+			isSingle="true"
+			overTarget="Floor"
+		}
+	}
+	StateAction{
+		id = "STA18"
+		Set {
+			action="DragUp"
+			objectTag="Draggeable"
+			methodName="SendDraggedItemToInventory"
+			isSingle="true"
+			overTarget="Untagged"
+		}
+	}
+	StateAction{
+		id = "STA19"
+		Set {
+			action="DragUp"
+			objectTag="Draggeable"
+			methodName="SendDraggedItemToInventory"
+			isSingle="true"
+			overTarget="Inventory"
+		}
+	}
+	StateAction{
+		id = "STA20"
+		Set {
+			action="DragUp"
+			objectTag="Draggeable"
+			methodName="SendDraggedItemToInventory"
+			isSingle="true"
+			overTarget="QuestActor"
+		}
+	}
+	StateAction {
+		id = "STA21"
+		Set {
+			action="DownUp"
+			objectTag="InteractPiezzel"
+			methodName="CheckPieceTap"
+			isSingle="true"
+		}
+	}
+}

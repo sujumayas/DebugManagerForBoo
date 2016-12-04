@@ -1,0 +1,29 @@
+Items {
+	Item {
+		id="IT01"
+		
+		Specs {
+			name="Item01"
+			imgSource="Prefabs/IT01"
+			type="Default"
+		}
+	}
+	Item {
+		id="IT02"
+		
+		Specs {
+			name="Item02"
+			imgSource="Prefabs/IT02"
+			type="Default"
+		}
+	}
+	Item {
+		id="IT03"
+		
+		Specs {
+			name="Item03"
+			imgSource="Prefabs/IT03"
+			type="Default"
+		}
+	}
+}

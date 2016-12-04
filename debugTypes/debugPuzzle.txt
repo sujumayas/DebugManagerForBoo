@@ -1,0 +1,1172 @@
+Puzzles {
+	Puzzle{
+		id = "PZZ0"
+		
+		PuzzlePiece {
+			id = "Tap01"
+			
+			Task {
+				action = "tap"
+				target = "Tap01"
+			}
+		}
+		
+		Calls {
+			Call {
+				id = "PC000"
+				onActivate = "ChangeVisibility"
+			
+				ParamList {
+				
+					sceneObject = "Pagina1"
+					param = "false"
+				}
+			}
+			Call {
+				id = "PC001"
+				onActivate = "ChangeVisibility"
+				waitID = "PC000"
+				
+				ParamList {
+				
+					sceneObject = "Pagina2"
+					param = "true"
+				}
+			}
+		}
+	}
+
+	Puzzle{
+		id = "PZZ1"
+		
+		PuzzlePiece {
+			id = "Tap02"
+			
+			Task {
+				action = "tap"
+				target = "Tap02"
+			}
+		}
+		PuzzlePiece {
+			id = "Tap03"
+			
+			Task {
+				action = "tap"
+				target = "Tap03"
+			}
+		}
+		PuzzlePiece {
+			id = "Tap04"
+
+			Task {
+				action = "tap"
+				target = "Tap04"
+			}
+		}
+		PuzzlePiece {
+			id = "Tap05"
+			
+			Task {
+				action = "tap"
+				target = "Tap05"
+			}
+		}
+		PuzzlePiece {
+			id = "Tap06"
+			
+			Task {
+				action = "tap"
+				target = "Tap06"
+			}
+		}
+		PuzzlePiece {
+			id = "Tap07"
+			
+			Task {
+				action = "tap"
+				target = "Tap07"
+			}
+		}
+		PuzzlePiece {
+			id = "Tap08"
+			
+			Task {
+				action = "tap"
+				target = "Tap08"
+			}
+		}
+		PuzzlePiece {
+			id = "Tap09"
+			
+			Task {
+				action = "tap"
+				target = "Tap09"
+			}
+		}
+		PuzzlePiece {
+			id = "Tap10"
+			
+			Task {
+				action = "tap"
+				target = "Tap10"
+			}
+		}
+		PuzzlePiece {
+			id = "Tap11"
+			
+			Task {
+				action = "tap"
+				target = "Tap11"
+			}
+		}
+		PuzzlePiece {
+			id = "Tap12"
+			
+			Task {
+				action = "tap"
+				target = "Tap12"
+			}
+		}
+		
+		Calls {
+			Call {
+				id = "PC002"
+				onActivate = "MakeSelectable"
+			
+				ParamList {
+			
+					sceneObject = "Tap13"
+					param = "true"
+				}
+			}
+		}
+	}
+	
+	Puzzle{
+		id = "PZZ2"
+		
+		PuzzlePiece {
+			id = "Tap13"
+			
+			Task {
+				action = "tap"
+				target = "Tap13"
+			}
+		}
+		
+		Calls {
+			Call {
+				id = "PC003"
+				onActivate = "MakeSelectable"
+			
+				ParamList {
+			
+					sceneObject = "Receiver01"
+					param = "true"
+				}
+			}
+			Call {
+				id = "PC004"
+				onActivate = "ChangeRotation"
+			
+				ParamList {
+			
+					sceneObject = "PlanetaExtra"
+					rotation = "60"
+				}
+			}
+		}
+	}
+	
+	Puzzle{
+		id = "PZZ3"
+		
+		PuzzlePiece {
+			id = "Receiver01"
+			
+			Task {
+				action = "receive"
+				target = "Tap13"
+			}
+		}
+		
+		Calls {
+			Call {
+				id = "PC005A"
+				onActivate = "ChangeRotation"
+			
+				ParamList {
+			
+					sceneObject = "PlanetaExtra"
+					rotation = "-90"
+				}
+			}
+			Call {
+				id = "PC005B"
+				onActivate = "ChangeRotation"
+			
+				ParamList {
+					sceneObject = "LlavesEstrellas"
+					rotation = "-90"
+				}
+			}
+			Call {
+				id = "PC006"
+				onActivate = "MakeScaleTransition"
+			
+				ParamList {
+			
+					sceneObject = "LlaveCompleta"
+					param = "true"
+				}
+			}
+			Call {
+				id = "PC007"
+				onActivate = "ChangeVisibility"
+			
+				ParamList {
+			
+					sceneObject = "Pagina2"
+					param = "false"
+				}
+			}
+			Call {
+				id = "PC008"
+				onActivate = "ChangeVisibility"
+				waitID = "PC007"
+				
+				ParamList {
+			
+					sceneObject = "pregunta1"
+					param = "true"
+				}
+			}
+		}
+	}
+	
+	Puzzle{
+		id = "PZZ4"
+		
+		PuzzlePiece {
+			id = "Tap14_1"
+			
+			Task {
+				action = "tap"
+				target = "Tap14_1"
+			}
+		}
+		
+		Calls {
+			Call {
+				id = "PC009"
+				onActivate = "MakeSelectable"
+				
+				ParamList {
+					
+					sceneObject = "Tap14_2"
+					param = "false"
+					sceneObject = "Tap14_3"
+					param = "false"
+				}
+			}
+			Call {
+				id = "PC010"
+				onActivate = "ChangeVisibility"
+			
+				ParamList {
+			
+					sceneObject = "pregunta1"
+					param = "false"
+				}
+			}
+			Call {
+				id = "PC011"
+				onActivate = "ChangeVisibility"
+				waitID = "PC010"
+			
+				ParamList {
+			
+					sceneObject = "pregunta2"
+					param = "true"
+				}
+			}
+		}
+	}
+	Puzzle{
+		id = "PZZ5"
+		
+		PuzzlePiece {
+			id = "Tap14_2"
+			
+			Task {
+				action = "tap"
+				target = "Tap14_2"
+			}
+		}
+		
+		Calls {
+			Call {
+				id = "PC012"
+				onActivate = "MakeSelectable"
+				
+				ParamList {
+					
+					sceneObject = "Tap14_1"
+					param = "false"
+					sceneObject = "Tap14_3"
+					param = "false"
+				}
+			}
+			Call {
+				id = "PC013"
+				onActivate = "ChangeVisibility"
+			
+				ParamList {
+			
+					sceneObject = "pregunta1"
+					param = "false"
+				}
+			}
+			Call {
+				id = "PC014"
+				onActivate = "ChangeVisibility"
+				waitID = "PC013"
+			
+				ParamList {
+			
+					sceneObject = "pregunta2"
+					param = "true"
+				}
+			}
+		}
+	}
+	Puzzle{
+		id = "PZZ6"
+		
+		PuzzlePiece {
+			id = "Tap14_3"
+			
+			Task {
+				action = "tap"
+				target = "Tap14_3"
+			}
+		}
+		
+		Calls {
+			Call {
+				id = "PC015"
+				onActivate = "MakeSelectable"
+				
+				ParamList {
+					
+					sceneObject = "Tap14_1"
+					param = "false"
+					sceneObject = "Tap14_2"
+					param = "false"
+				}
+			}
+			Call {
+				id = "PC016"
+				onActivate = "ChangeVisibility"
+			
+				ParamList {
+			
+					sceneObject = "pregunta1"
+					param = "false"
+				}
+			}
+			Call {
+				id = "PC017"
+				onActivate = "ChangeVisibility"
+				waitID = "PC016"
+				
+				ParamList {
+			
+					sceneObject = "pregunta2"
+					param = "true"
+				}
+			}
+		}
+	}
+	Puzzle{
+		id = "PZZ7"
+		
+		PuzzlePiece {
+			id = "Tap15_1"
+			
+			Task {
+				action = "tap"
+				target = "Tap15_1"
+			}
+		}
+		
+		Calls {
+			Call {
+				id = "PC018"
+				onActivate = "MakeSelectable"
+				
+				ParamList {
+					
+					sceneObject = "Tap15_2"
+					param = "false"
+					sceneObject = "Tap15_3"
+					param = "false"
+				}
+			}
+			Call {
+				id = "PC019"
+				onActivate = "ChangeVisibility"
+			
+				ParamList {
+			
+					sceneObject = "pregunta2"
+					param = "false"
+				}
+			}
+			Call {
+				id = "PC020"
+				onActivate = "ChangeVisibility"
+				waitID = "PC019"
+			
+				ParamList {
+			
+					sceneObject = "pregunta3"
+					param = "true"
+				}
+			}
+		}
+	}
+	Puzzle{
+		id = "PZZ8"
+		
+		PuzzlePiece {
+			id = "Tap15_2"
+			
+			Task {
+				action = "tap"
+				target = "Tap15_2"
+			}
+		}
+		
+		Calls {
+			Call {
+				id = "PC021"
+				onActivate = "MakeSelectable"
+				
+				ParamList {
+					
+					sceneObject = "Tap15_1"
+					param = "false"
+					sceneObject = "Tap15_3"
+					param = "false"
+				}
+			}
+			Call {
+				id = "PC022"
+				onActivate = "ChangeVisibility"
+			
+				ParamList {
+			
+					sceneObject = "pregunta2"
+					param = "false"
+				}
+			}
+			Call {
+				id = "PC023"
+				onActivate = "ChangeVisibility"
+				waitID = "PC022"
+			
+				ParamList {
+			
+					sceneObject = "pregunta3"
+					param = "true"
+				}
+			}
+		}
+	}
+	Puzzle{
+		id = "PZZ9"
+		
+		PuzzlePiece {
+			id = "Tap15_3"
+			
+			Task {
+				action = "tap"
+				target = "Tap15_3"
+			}
+		}
+		
+		Calls {
+			Call {
+				id = "PC024"
+				onActivate = "MakeSelectable"
+				
+				ParamList {
+					
+					sceneObject = "Tap15_1"
+					param = "false"
+					sceneObject = "Tap15_2"
+					param = "false"
+				}
+			}
+			Call {
+				id = "PC025"
+				onActivate = "ChangeVisibility"
+			
+				ParamList {
+			
+					sceneObject = "pregunta2"
+					param = "false"
+				}
+			}
+			Call {
+				id = "PC026"
+				onActivate = "ChangeVisibility"
+				waitID = "PC025"
+			
+				ParamList {
+			
+					sceneObject = "pregunta3"
+					param = "true"
+				}
+			}
+		}
+	}
+	Puzzle{
+		id = "PZZ10"
+		
+		PuzzlePiece {
+			id = "Tap16_1"
+			
+			Task {
+				action = "tap"
+				target = "Tap16_1"
+			}
+		}
+		
+		Calls {
+			Call {
+				id = "PC027"
+				onActivate = "MakeSelectable"
+				
+				ParamList {
+					
+					sceneObject = "Tap16_2"
+					param = "false"
+					sceneObject = "Tap16_3"
+					param = "false"
+				}
+			}
+			Call {
+				id = "PC028"
+				onActivate = "ChangeVisibility"
+			
+				ParamList {
+			
+					sceneObject = "pregunta3"
+					param = "false"
+				}
+			}
+			Call {
+				id = "PC029"
+				onActivate = "ChangeVisibility"
+				waitID = "PC028"
+				
+				ParamList {
+			
+					sceneObject = "pregunta4"
+					param = "true"
+				}
+			}
+		}
+	}
+	Puzzle{
+		id = "PZZ11"
+		
+		PuzzlePiece {
+			id = "Tap16_2"
+			
+			Task {
+				action = "tap"
+				target = "Tap16_2"
+			}
+		}
+		
+		Calls {
+			Call {
+				id = "PC030"
+				onActivate = "MakeSelectable"
+				
+				ParamList {
+					
+					sceneObject = "Tap16_1"
+					param = "false"
+					sceneObject = "Tap16_3"
+					param = "false"
+				}
+			}
+			Call {
+				id = "PC031"
+				onActivate = "ChangeVisibility"
+			
+				ParamList {
+			
+					sceneObject = "pregunta3"
+					param = "false"
+				}
+			}
+			Call {
+				id = "PC032"
+				onActivate = "ChangeVisibility"
+				waitID = "PC031"
+			
+				ParamList {
+			
+					sceneObject = "pregunta4"
+					param = "true"
+				}
+			}
+		}
+	}
+	Puzzle{
+		id = "PZZ12"
+		
+		PuzzlePiece {
+			id = "Tap16_3"
+			
+			Task {
+				action = "tap"
+				target = "Tap16_3"
+			}
+		}
+		
+		Calls {
+			Call {
+				id = "PC033"
+				onActivate = "MakeSelectable"
+				
+				ParamList {
+					
+					sceneObject = "Tap16_1"
+					param = "false"
+					sceneObject = "Tap16_2"
+					param = "false"
+				}
+			}
+			Call {
+				id = "PC034"
+				onActivate = "ChangeVisibility"
+			
+				ParamList {
+			
+					sceneObject = "pregunta3"
+					param = "false"
+				}
+			}
+			Call {
+				id = "PC035"
+				onActivate = "ChangeVisibility"
+				waitID = "PC034"
+			
+				ParamList {
+			
+					sceneObject = "pregunta4"
+					param = "true"
+				}
+			}
+		}
+	}
+	Puzzle{
+		id = "PZZ13"
+		
+		PuzzlePiece {
+			id = "Tap17_1"
+			
+			Task {
+				action = "tap"
+				target = "Tap17_1"
+			}
+		}
+		
+		Calls {
+			Call {
+				id = "PC036"
+				onActivate = "MakeSelectable"
+				
+				ParamList {
+					
+					sceneObject = "Tap17_2"
+					param = "false"
+					sceneObject = "Tap17_3"
+					param = "false"
+				}
+			}
+			Call {
+				id = "PC037"
+				onActivate = "ChangeVisibility"
+			
+				ParamList {
+			
+					sceneObject = "pregunta4"
+					param = "false"
+				}
+			}
+			Call {
+				id = "PC038"
+				onActivate = "ChangeVisibility"
+				waitID = "PC037"
+			
+				ParamList {
+			
+					sceneObject = "pregunta5"
+					param = "true"
+				}
+			}
+		}
+	}
+	Puzzle{
+		id = "PZZ14"
+		
+		PuzzlePiece {
+			id = "Tap17_2"
+			
+			Task {
+				action = "tap"
+				target = "Tap17_2"
+			}
+		}
+		
+		Calls {
+			Call {
+				id = "PC039"
+				onActivate = "MakeSelectable"
+				
+				ParamList {
+					
+					sceneObject = "Tap17_1"
+					param = "false"
+					sceneObject = "Tap17_3"
+					param = "false"
+				}
+			}
+			Call {
+				id = "PC040"
+				onActivate = "ChangeVisibility"
+			
+				ParamList {
+			
+					sceneObject = "pregunta4"
+					param = "false"
+				}
+			}
+			Call {
+				id = "PC041"
+				onActivate = "ChangeVisibility"
+				waitID = "PC040"
+				
+				ParamList {
+			
+					sceneObject = "pregunta5"
+					param = "true"
+				}
+			}
+		}
+	}
+	Puzzle{
+		id = "PZZ15"
+		
+		PuzzlePiece {
+			id = "Tap17_3"
+			
+			Task {
+				action = "tap"
+				target = "Tap17_3"
+			}
+		}
+		
+		Calls {
+			Call {
+				id = "PC042"
+				onActivate = "MakeSelectable"
+				
+				ParamList {
+					
+					sceneObject = "Tap17_1"
+					param = "false"
+					sceneObject = "Tap17_2"
+					param = "false"
+				}
+			}
+			Call {
+				id = "PC043"
+				onActivate = "ChangeVisibility"
+			
+				ParamList {
+			
+					sceneObject = "pregunta4"
+					param = "false"
+				}
+			}
+			Call {
+				id = "PC044"
+				onActivate = "ChangeVisibility"
+				waitID = "PC043"
+			
+				ParamList {
+			
+					sceneObject = "pregunta5"
+					param = "true"
+				}
+			}
+		}
+	}
+	Puzzle{
+		id = "PZZ16"
+		
+		PuzzlePiece {
+			id = "Tap18_1"
+			
+			Task {
+				action = "tap"
+				target = "Tap18_1"
+			}
+		}
+		
+		Calls {
+			Call {
+				id = "PC045"
+				onActivate = "MakeSelectable"
+				
+				ParamList {
+					
+					sceneObject = "Tap18_2"
+					param = "false"
+					sceneObject = "Tap18_3"
+					param = "false"
+				}
+			}
+			Call {
+				id = "PC046"
+				onActivate = "ChangeVisibility"
+			
+				ParamList {
+			
+					sceneObject = "pregunta5"
+					param = "false"
+				}
+			}
+			Call {
+				id = "PC047"
+				onActivate = "MakeScaleTransition"
+				waitID = "PC046"
+				
+				ParamList {
+				
+					puzzleForm = "FondoDefault"
+					setBool = "true"
+				}
+			}
+			Call {
+				id = "PC05DF"
+				onActivate = "DismissForm"
+				waitID = "PC047"
+				
+				ParamList {
+			
+					puzzleForm = "Pergamino"
+				}
+			}
+		}
+	}
+	Puzzle{
+		id = "PZZ17"
+		
+		PuzzlePiece {
+			id = "Tap18_2"
+			
+			Task {
+				action = "tap"
+				target = "Tap18_2"
+			}
+		}
+		
+		Calls {
+			Call {
+				id = "PC049"
+				onActivate = "MakeSelectable"
+				
+				ParamList {
+					
+					sceneObject = "Tap18_1"
+					param = "false"
+					sceneObject = "Tap18_3"
+					param = "false"
+				}
+			}
+			Call {
+				id = "PC050"
+				onActivate = "ChangeVisibility"
+			
+				ParamList {
+			
+					sceneObject = "pregunta5"
+					param = "false"
+				}
+			}
+			Call {
+				id = "PC051"
+				onActivate = "MakeScaleTransition"
+				waitID = "PC050"
+				
+				ParamList {
+				
+					puzzleForm = "FondoDefault"
+					setBool = "true"
+				}
+			}
+			Call {
+				id = "PC05DF"
+				onActivate = "DismissForm"
+				waitID = "PC051"
+				
+				ParamList {
+			
+					puzzleForm = "Pergamino"
+				}
+			}
+		}
+	}
+	Puzzle{
+		id = "PZZ18"
+		
+		PuzzlePiece {
+			id = "Tap18_3"
+			
+			Task {
+				action = "tap"
+				target = "Tap18_3"
+			}
+		}
+		
+		Calls {
+			Call {
+				id = "PC053"
+				onActivate = "MakeSelectable"
+				
+				ParamList {
+					
+					sceneObject = "Tap18_1"
+					param = "false"
+					sceneObject = "Tap18_2"
+					param = "false"
+				}
+			}
+			Call {
+				id = "PC054"
+				onActivate = "ChangeVisibility"
+			
+				ParamList {
+			
+					sceneObject = "pregunta5"
+					param = "false"
+				}
+			}
+			Call {
+				id = "PC055"
+				onActivate = "MakeScaleTransition"
+				waitID = "PC054"
+				
+				ParamList {
+				
+					puzzleForm = "FondoDefault"
+					setBool = "true"
+				}
+			}
+			Call {
+				id = "PC05DF"
+				onActivate = "DismissForm"
+				waitID = "PC055"
+				
+				ParamList {
+			
+					puzzleForm = "Pergamino"
+				}
+			}
+		}
+	}
+	Puzzle{
+		id = "PZZ19"
+		
+		PuzzlePiece {
+			id = "Tap19"
+			
+			Task {
+				action = "tap"
+				target = "Tap19"
+			}
+		}
+		
+		Calls {
+			Call {
+				id = "PC056"
+				onActivate = "ForcePiece"
+				
+				ParamList {
+					
+					puzzleID = "PZZ25"
+					pieceID = "VoidPiece01"
+				}
+			}
+		}
+	}
+	Puzzle{
+		id = "PZZ20"
+		
+		PuzzlePiece {
+			id = "Tap20"
+			
+			Task {
+				action = "tap"
+				target = "Tap20"
+			}
+		}
+		
+		Calls {
+			Call {
+				id = "PC058"
+				onActivate = "ForcePiece"
+				
+				ParamList {
+					
+					puzzleID = "PZZ25"
+					pieceID = "VoidPiece01"
+				}
+			}
+		}
+	}
+	Puzzle{
+		id = "PZZ21"
+		
+		PuzzlePiece {
+			id = "Tap21"
+			
+			Task {
+				action = "tap"
+				target = "Tap21"
+			}
+		}
+		
+		Calls {
+			Call {
+				id = "PC060"
+				onActivate = "ForcePiece"
+				
+				ParamList {
+					
+					puzzleID = "PZZ25"
+					pieceID = "VoidPiece01"
+				}
+			}
+		}
+	}
+	Puzzle{
+		id = "PZZ22"
+		
+		PuzzlePiece {
+			id = "Tap22"
+			
+			Task {
+				action = "tap"
+				target = "Tap22"
+			}
+		}
+		
+		Calls {
+			Call {
+				id = "PC062"
+				onActivate = "ForcePiece"
+				
+				ParamList {
+					
+					puzzleID = "PZZ25"
+					pieceID = "VoidPiece01"
+				}
+			}
+		}
+	}
+	Puzzle{
+		id = "PZZ23"
+		
+		PuzzlePiece {
+			id = "Tap23"
+			
+			Task {
+				action = "tap"
+				target = "Tap23"
+			}
+		}
+		
+		Calls {
+			Call {
+				id = "PC064"
+				onActivate = "ForcePiece"
+				
+				ParamList {
+					
+					puzzleID = "PZZ25"
+					pieceID = "VoidPiece01"
+				}
+			}
+		}
+	}
+	Puzzle{
+		id = "PZZ24"
+		
+		PuzzlePiece {
+			id = "Tap24"
+			
+			Task {
+				action = "tap"
+				target = "Tap24"
+			}
+		}
+		
+		Calls {
+			Call {
+				id = "PC066"
+				onActivate = "ForcePiece"
+				
+				ParamList {
+					
+					puzzleID = "PZZ25"
+					pieceID = "VoidPiece01"
+				}
+			}
+		}
+	}
+	Puzzle{
+		id = "PZZ25"
+		
+		PuzzlePiece {
+			id = "VoidPiece01"
+			
+			Task {
+				action = "force"
+				target = "VoidPiece01"
+			}
+		}
+		
+		Calls {
+			Call {
+				id = "PC068"
+				onActivate = "CloseMultipleBubbles"
+				
+				ParamList {
+					
+					sceneObject = "YesNoBubbles"
+					param = "transition"
+				}
+			}
+		}
+	}
+}

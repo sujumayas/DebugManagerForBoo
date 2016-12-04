@@ -1,0 +1,86 @@
+ActorStateSets {
+	Set {
+		actorID = "ACT01"
+	
+		ActorState {
+			id = "ACS00"
+			state = "Default"
+			movingPace = "1.5"
+			Animations {
+				idleSufix = "Idle"
+				movingSufix = "Moving"
+				pickingSufix = "Picking"
+			}
+		}
+		ActorState {
+			id = "ACS01"
+			state = "CrouchingBlur"
+			movingPace = "0.8"
+			Animations {
+				idleSufix = "Idle"
+				movingSufix = "Moving"
+			}
+		}
+	}
+	
+
+	Set {
+		actorID = "ACT02"
+		
+		ActorState {
+			id = "ACS00"
+			state = "Default"
+			Animations {
+				idleSufix = "Idle"
+			}
+		}
+	}
+
+	Set {
+		actorID = "ACT03"
+		
+		ActorState {
+			id = "ACS00"
+			state = "Default"
+			Animations {
+				idleSufix = "Idle"
+			}
+		}
+	}
+
+	Set {
+		actorID = "ACT04"
+		
+		ActorState {
+			id = "ACS00"
+			state = "Default"
+			Animations {
+				idleSufix = "Idle"
+			}
+		}
+	}
+
+	Set {
+		actorID = "ACT05"
+		
+		ActorState {
+			id = "ACS00"
+			state = "Default"
+			Animations {
+				idleSufix = "Idle"
+			}
+		}
+	}
+
+	Set {
+		actorID = "ACT06"
+		
+		ActorState {
+			id = "ACS00"
+			state = "Default"
+			Animations {
+				idleSufix = "Idle"
+			}
+		}
+	}
+}

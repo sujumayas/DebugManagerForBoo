@@ -1,0 +1,602 @@
+Cinematics {
+	Cinematic {
+
+		id = "CMT01"
+		endState = "FreeMode"
+
+		Init {
+			id = "INS01"
+		}
+		Packages{
+			Package{
+				id = "PK01"
+				RawData {
+					TargetObject = "ACT02"
+					CinematicController = "Animations/Actors/GreenGirl/Misc/Turn"
+				}
+			}
+			Package{
+				id = "PK02"
+				RawData {
+					TargetObject = "ACT01"
+					CinematicController = "Animations/Actors/Altibor/States/DefaultIdle"
+				}
+			}
+			Package{
+				id = "PK03"
+				RawData {
+					TargetObject = "ACT01"
+					CinematicController = "Animations/Actors/Altibor/States/DefaultMoving"
+				}
+			}
+			Package{
+				id = "PK04"
+				RawData {
+					TargetObject = "ACT02"
+					CinematicController = "Animations/Actors/GreenGirl/Misc/TurnIdle"
+				}
+			}
+			Package{
+				id = "PK05"
+				RawData {
+					TargetObject = "ACT02"
+					CinematicController = "Animations/Actors/GreenGirl/Misc/TurnBack"
+				}
+			}
+			Package{
+				id = "PK06"
+				RawData {
+					TargetObject = "ACT02"
+					CinematicController = "Animations/Actors/GreenGirl/States/DefaultIdle"
+				}
+			}
+		}
+		Instructions {
+			Instruction {
+				id = "INS01"
+				methodName = "CinematicReplaceActor"
+			
+				Params {
+					packageID = "PK02"
+				}
+				NextIDs {
+					instruction = "INS02"
+					instruction = "INS03"
+				}
+			}
+
+			Instruction {
+				id = "INS02"
+				methodName = "CinematicPlayAnimationOnActor"
+			
+				Params {
+					packageID = "PK01"
+				}
+				NextIDs {
+					instruction = "INS04"
+				}
+			}
+
+			Instruction {
+				id = "INS03"
+				methodName = "CinematicMakeActorSay"
+			
+				Params {
+					actorID = "ACT02"
+					dialogID = "rg19"
+					sayTimer = "2.5"
+				}
+				NextIDs {
+					instruction = "INS05"
+					instruction = "INS06"
+				}
+			}
+
+			Instruction {
+				id = "INS04"
+				methodName = "CinematicSetLoopAnimationOnActor"
+
+				Params {
+					packageID = "PK04"
+				}
+			}
+
+			Instruction {
+				id = "INS05"
+				methodName = "CinematicFlip"
+			
+				Params {
+					actorID = "ACT01"
+				}
+				NextIDs {
+					instruction = "INS08"
+				}
+			}
+
+			Instruction {
+				id = "INS06"
+				methodName = "CinematicPlayAnimationOnActor"
+			
+				Params {
+					packageID = "PK05"
+				}
+				NextIDs {
+					instruction = "INS07"
+				}
+			}
+
+			Instruction {
+				id = "INS07"
+				methodName = "CinematicSetLoopAnimationOnActor"
+
+				Params {
+					packageID = "PK06"
+				}
+			}
+
+			Instruction {
+				id = "INS08"
+				methodName = "CinematicSetLoopAnimation"
+			
+				Params {
+					packageID = "PK03"
+				}
+				NextIDs {
+					instruction = "INS09"
+				}
+			}
+
+			Instruction {
+				id = "INS09"
+				methodName = "CinematicMoveActor"
+
+				Params {
+					packageID = "PK02"
+					moveX = "3.3"
+					moveY = "-3.06"
+					velocity = "1.5"
+				}
+
+				NextIDs {
+					instruction = "INS10"
+				}
+			}
+
+			Instruction {
+				id = "INS10"
+				methodName = "CinematicFlip"
+			
+				Params {
+					actorID = "ACT01"
+				}
+				NextIDs {
+					instruction = "INS11"
+				}
+			}
+
+			Instruction {
+				id = "INS11"
+				methodName = "CinematicReplaceStunt"
+			
+				Params {
+					packageID = "PK02"
+				}
+			}
+			
+		}
+	}
+	Cinematic {
+
+		id = "CMT02"
+		endState = "Interacting"
+
+		Init {
+			id = "INS01"
+			id = "INS02"
+		}
+		Packages{
+			Package{
+				id = "PK01"
+				RawData {
+					TargetObject = "ACT01"
+					CinematicController = "Animations/Actors/Altibor/States/DefaultMoving"
+				}
+			}
+			Package{
+				id = "PK02"
+				RawData {
+					TargetObject = "ACT01"
+					CinematicController = "Animations/Actors/Altibor/States/DefaultIdle"
+				}
+			}
+		}
+		Instructions {
+			Instruction {
+				id = "INS01"
+				methodName = "CinematicReplaceActor"
+			
+				Params {
+					packageID = "PK01"
+				}
+				NextIDs {
+					instruction = "INS03"
+				}
+			}
+			Instruction {
+				id = "INS02"
+				methodName = "CinematicCamMove"
+			
+				Params {
+					action = "Zoom"
+					targetBox = "Box02"
+				}
+			}
+			Instruction {
+				id = "INS03"
+				methodName = "CinematicMoveActor"
+			
+				Params {
+					packageID = "PK02"
+					moveX = "-2.6"
+					moveY = "-3.4"
+					velocity = "1.5"
+				}
+				NextIDs {
+					instruction = "INS05"
+				}
+			}
+			Instruction {
+				id = "INS05"
+				methodName = "CinematicReplaceStunt"
+				
+				Params {
+					packageID = "PK02"
+				}
+			}
+		}
+	}
+	Cinematic {
+
+		id = "CMT03"
+		endState = "FreeMode"
+
+		Init {
+			id = "INS01"
+		}
+		Packages{
+			Package{
+				id = "PK01"
+				RawData {
+					TargetObject = "ACT01"
+					CinematicController = "Animations/Actors/Altibor/States/CrouchingBlurIdle"
+				}
+			}
+			Package{
+				id = "PK02"
+				RawData {
+					TargetObject = "STU01"
+					CinematicController = "Animations/Actors/Altibor/Misc/GlassesAndUp"
+				}
+			}
+			Package{
+				id = "PK03"
+				RawData {
+					TargetObject = "ACT01"
+					CinematicController = "Animations/Actors/Altibor/States/DefaultIdle"
+				}
+			}
+		}
+		Instructions {
+			Instruction {
+				id = "INS01"
+				methodName = "CinematicReplaceActor"
+			
+				Params {
+					packageID = "PK01"
+				}
+				NextIDs {
+					instruction = "INS02"
+				}
+			}
+			Instruction {
+				id = "INS02"
+				methodName = "CinematicPlayAnimationOnActor"
+			
+				Params {
+					packageID = "PK02"
+				}
+				NextIDs {
+					instruction = "INS03"
+				}
+			}
+			Instruction {
+				id = "INS03"
+				methodName = "CinematicReplaceStunt"
+			
+				Params {
+					packageID = "PK03"
+				}
+			}
+		}
+	}
+	Cinematic {
+
+		id = "CMT04"
+		endState = "FreeMode"
+
+		Init {
+			id = "INS01"
+		}
+		Packages{
+			Package{
+				id = "PK01"
+				RawData {
+					TargetObject = "ACT02"
+					CinematicController = "Animations/Actors/GreenGirl/Misc/PassingPaper"
+				}
+			}
+			Package{
+				id = "PK02"
+				RawData {
+					TargetObject = "ACT02"
+					CinematicController = "Animations/Actors/GreenGirl/Misc/PassingIdle"
+				}
+			}
+			Package{
+				id = "PK03"
+				RawData {
+					TargetObject = "ACT01"
+					CinematicController = "Animations/Actors/Altibor/States/DefaultIdle"
+				}
+			}
+			Package{
+				id = "PK04"
+				RawData {
+					TargetObject = "ACT01"
+					CinematicController = "Animations/Actors/Altibor/States/DefaultMoving"
+				}
+			}
+			Package{
+				id = "PK05"
+				RawData {
+					TargetObject = "STU01"
+					CinematicController = "Animations/Actors/Altibor/Misc/Stretching"
+				}
+			}
+			Package{
+				id = "PK06"
+				RawData {
+					TargetObject = "STU01"
+					CinematicController = "Animations/Actors/Altibor/Misc/StretchingBack"
+				}
+			}
+			Package{
+				id = "PK07"
+				RawData {
+					TargetObject = "ACT02"
+					CinematicController = "Animations/Actors/GreenGirl/Misc/TurnIdle"
+				}
+			}
+			Package{
+				id = "PK08"
+				RawData {
+					TargetObject = "ACT02"
+					CinematicController = "Animations/Actors/GreenGirl/Misc/TurnBack"
+				}
+			}
+			Package{
+				id = "PK09"
+				RawData {
+					TargetObject = "ACT02"
+					CinematicController = "Animations/Actors/GreenGirl/States/DefaultIdle"
+				}
+			}
+		}
+		Instructions {
+			Instruction {
+				id = "INS01"
+				methodName = "CinematicMakeActorSay"
+			
+				Params {
+					actorID = "ACT02"
+					dialogID = "rg13"
+					sayTimer = "2.5"
+				}
+				NextIDs {
+					instruction = "INS02"
+				}
+			}
+			Instruction {
+				id = "INS02"
+				methodName = "CinematicPlayAnimationOnActor"
+			
+				Params {
+					packageID = "PK01"
+				}
+				NextIDs {
+					instruction = "INS03"
+				}
+			}
+			Instruction {
+				id = "INS03"
+				methodName = "CinematicSetLoopAnimationOnActor"
+			
+				Params {
+					packageID = "PK02"
+				}
+				NextIDs {
+					instruction = "INS04"
+				}
+			}
+			Instruction {
+				id = "INS04"
+				methodName = "CinematicReplaceActor"
+			
+				Params {
+					packageID = "PK04"
+				}
+				NextIDs {
+					instruction = "INS05"
+				}
+			}
+			Instruction {
+				id = "INS05"
+				methodName = "CinematicMoveActor"
+			
+				Params {
+					packageID = "PK03"
+					moveX = "2.0"
+					moveY = "-2.9"
+					velocity = "1.5"
+				}
+				NextIDs {
+					instruction = "INS06"
+				}
+			}
+			Instruction {
+				id = "INS06"
+				methodName = "CinematicPlayAnimationOnActor"
+			
+				Params {
+					packageID = "PK05"
+				}
+				NextIDs {
+					instruction = "INS07"
+					instruction = "INS08"
+				}
+			}
+			Instruction {
+				id = "INS07"
+				methodName = "CinematicPlayAnimationOnActor"
+			
+				Params {
+					packageID = "PK06"
+				}
+				NextIDs {
+					instruction = "INS09"
+				}
+			}
+			Instruction {
+				id = "INS08"
+				methodName = "CinematicSetLoopAnimationOnActor"
+			
+				Params {
+					packageID = "PK07"
+				}
+				NextIDs {
+					instruction = "INS10"
+				}
+			}
+			Instruction {
+				id = "INS09"
+				methodName = "CinematicReplaceStunt"
+				
+				Params {
+					packageID = "PK03"
+				}
+			}
+			Instruction {
+				id = "INS10"
+				methodName = "CinematicMakeActorSay"
+			
+				Params {
+					actorID = "ACT02"
+					dialogID = "rg17"
+					sayTimer = "2.5"
+				}
+				NextIDs {
+					instruction = "INS11"
+				}
+			}
+			Instruction {
+				id = "INS11"
+				methodName = "CinematicPlayAnimationOnActor"
+			
+				Params {
+					packageID = "PK08"
+				}
+				NextIDs {
+					instruction = "INS12"
+				}
+			}
+			Instruction {
+				id = "INS12"
+				methodName = "CinematicSetLoopAnimationOnActor"
+			
+				Params {
+					packageID = "PK09"
+				}
+			}
+		}
+	}
+	Cinematic {
+
+		id = "CMT05"
+		endState = "FreeMode"
+
+		Init {
+			id = "INS01"
+		}
+		Packages{
+			Package{
+				id = "PK01"
+				RawData {
+					TargetObject = "ACT01"
+					CinematicController = "Animations/Actors/Altibor/States/DefaultIdle"
+				}
+			}
+			Package{
+				id = "PK02"
+				RawData {
+					TargetObject = "ACT01"
+					CinematicController = "Animations/Actors/Altibor/States/DefaultMoving"
+				}
+			}
+			Package{
+				id = "PK03"
+				RawData {
+					TargetObject = "ACT01"
+					CinematicController = "Animations/Actors/Altibor/States/DefaultStretching"
+				}
+			}
+		}
+		Instructions {
+			Instruction {
+				id = "INS01"
+				methodName = "CinematicReplaceActor"
+			
+				Params {
+					packageID = "PK02"
+				}
+				NextIDs {
+					instruction = "INS02"
+				}
+			}
+			Instruction {
+				id = "INS02"
+				methodName = "CinematicMoveActor"
+			
+				Params {
+					packageID = "PK03"
+					moveX = "2.0"
+					moveY = "-2.9"
+					velocity = "1.5"
+				}
+				NextIDs {
+					instruction = "INS03"
+				}
+			}
+			Instruction {
+				id = "INS04"
+				methodName = "CinematicPlayAnimationOnActor"
+			
+				Params {
+					packageID = "PK01"
+				}
+				NextIDs {
+					instruction = "INS03"
+				}
+			}
+		}
+	}
+}
